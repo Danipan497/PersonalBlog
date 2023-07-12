@@ -1,0 +1,47 @@
+﻿@model IEnumerable<PersonalBlog.Models.BlogPost>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<button type="button" class="btn btn-outline-secondary mt_button mb_button" onclick="location.href='@Url.Action("Create", "BlogPosts")'">
+    Create new entry
+</button>
+
+
+<div class="table-responsive-md">
+    <table class="table table-borderless table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Entry)
+                </th>
+                @*            <th>
+                @Html.DisplayNameFor(model => model.EntryContent)
+                </th>*@
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Entry)
+                    </td>
+                    @*            <td>
+                @Html.DisplayFor(modelItem => item.EntryContent)
+                </td>*@
+                    <td align="right">
+                        <a asp-action="Details" asp-route-id="@item.Id"><button type="button" class="btn btn-outline-secondary">Details</button></a>
+                        <a asp-action="Edit" asp-route-id="@item.Id"><button type="button" class="btn btn-outline-secondary">Edit</button></a>
+                        <a asp-action="Delete" asp-route-id="@item.Id"><button type="button" class="btn btn-outline-secondary">Delete</button></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+

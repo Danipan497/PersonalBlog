@@ -1,0 +1,30 @@
+﻿@model PersonalBlog.Models.BlogPost
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h7>Entry details</h7>
+
+<div>
+    <hr/>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Entry)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Entry)
+        </dd>
+        <dt class = "col-sm-2">
+            EntryContent
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EntryContent)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id"><button type="button" class="btn btn-outline-secondary">Edit</button></a>
+    <a asp-action="Delete" asp-route-id="@Model?.Id"><button type="button" class="btn btn-outline-secondary">Delete</button></a>
+    <a asp-action="Index" asp-route-id="@Model?.Id"><button type="button" class="btn btn-outline-secondary">Back to List</button></a>
+</div>
