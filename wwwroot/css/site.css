@@ -30,12 +30,16 @@ footer {
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    background-color: transparent;
 }
 
 h1 {
     display: block;
-    color: black;
     font-size: 1.75em;
     margin-left: 0;
     margin-right: 0;
@@ -45,7 +49,6 @@ h1 {
 h2 {
     display: block;
     font-size: 1.5em;
-    color: black;
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
@@ -53,6 +56,10 @@ h2 {
 
 p {
     text-align:justify;
+}
+
+tdgrey {
+    color: dimgray;
 }
 
 h7 {
