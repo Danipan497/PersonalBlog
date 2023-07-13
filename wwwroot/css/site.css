@@ -58,6 +58,10 @@ p {
     text-align:justify;
 }
 
+.navbar-customtext {
+    margin-top: 100px;
+}
+
 tdgrey {
     color: dimgray;
 }

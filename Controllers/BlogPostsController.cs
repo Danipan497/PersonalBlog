@@ -21,6 +21,7 @@ namespace PersonalBlog.Controllers
         }
 
         // GET: BlogPosts
+        [Authorize]
         public async Task<IActionResult> Index()
         {
               return _context.BlogPost != null ? 
@@ -29,6 +30,7 @@ namespace PersonalBlog.Controllers
         }
 
         // GET: BlogPosts/ShowSearchForm
+        [Authorize]
         public async Task<IActionResult> ShowSearchForm()
         {
             return View();
