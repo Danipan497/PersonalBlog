@@ -17,11 +17,11 @@
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                          <img 
-                             src="https://cdn.dribbble.com/users/2007778/screenshots/14759059/media/fb33712816bc9d6019abbde168e87a7a.jpg?compress=1&resize=1000x750&vertical=center"
+                             src="~/images/PB_logo_index.png"
                              alt=""
                              width="30"
-                             height="30"
-                         >
+                             height="30" 
+                          />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -44,12 +44,17 @@
                     <ul class="navbar-nav flex-grow-2">
                         @if (User.Identity?.IsAuthenticated == true)
                         {
-                            <li class="nav-item mb-0">
-                                <a class="nav-link" title="Manage" href="/Identity/Account/Manage">Hello @User.Identity?.Name!</a>
+ @*                           <li class="nav-item mt-2">
+                                Hello @User.Identity?.Name!
+                            </li>*@
+                            <li>
+                                <a class="nav-link" title="Manage" href="/Identity/Account/Manage">
+                                    <img src="~/images/gear.svg" class="filter-gray">
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
-                                    <button type="submit" class="nav-link btn btn-link">Logout</button>
+                                    <button type="submit" class="nav-link btn btn-link"><img src="~/images/box-arrow-right.svg" class="filter-gray"></button>
                                 </form>
                             </li>
                         }
