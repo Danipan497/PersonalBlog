@@ -34,7 +34,7 @@ a {
 }
 
 a:hover {
-    color: black;
+    color: dimgrey;
     background-color: transparent;
 }
 
@@ -222,5 +222,13 @@ hr.divider-horizontal-blurry {
     margin-bottom: 15px;
 }
 
+/*Navbar*/
 
+.filter-gray {
+    filter: invert(32%) sepia(0%) saturate(6041%) hue-rotate(140deg) brightness(109%) contrast(58%);
+}
 
+.filter-gray:hover {
+    filter: invert(27%) sepia(0%) saturate(0%) hue-rotate(147deg) brightness(98%) contrast(87%);
+    background-color: transparent;
+}
