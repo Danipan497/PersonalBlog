@@ -66,6 +66,7 @@ tdgrey {
     color: dimgray;
 }
 
+
 h7 {
     display: block;
     margin-top: 15px;
@@ -231,4 +232,27 @@ hr.divider-horizontal-blurry {
 .filter-gray:hover {
     filter: invert(27%) sepia(0%) saturate(0%) hue-rotate(147deg) brightness(98%) contrast(87%);
     background-color: transparent;
+}
+
+/*Override bootstrap styles*/
+
+.form-control:focus {
+    border-color: #4C4C4C !important;
+    box-shadow: 0 0 0 0.2rem rgba(76, 76, 76, 0.25) !important;
+}
+
+.table {
+    color: #4C4C4C !important;
+    --bs-table-hover-color: dimgrey !important;
+}
+
+.form-check-input:focus {
+    border-color: dimgray !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 0.25rem rgba(105, 105, 105, 0.25) !important;
+}
+
+.form-check-input:checked {
+    background-color: #4C4C4C !important;
+    border-color: #4C4C4C !important ;
 }
